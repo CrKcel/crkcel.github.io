@@ -1,20 +1,20 @@
 ---
 title: "格式文档"
-publishDate: 2026-09-01
-description: "演示该网站所支持的文本样式。"
+publishDate: 2026-01-01
+description: "演示该网站支持的文本样式。"
 draft: true
 ---
 
-用于预览该网站支持的文本样式的演示文档。
+预览网站支持的文本样式。
 
-## Frontmatter shape
+## 前置信息
 
 ```yaml
 ---
 title: "文章标题"
 publishDate: 2026-01-01
 description: "用于卡片、社交预览和元标签的一句摘要。"
-tags: [ tag-one, tag-two ]
+# tags: [ tag-one, tag-two ]
 # updatedDate: 2026-02-01      # 可选 - 更新日期
 # draft: true                  # 不在构建显示的草稿
 # coverImage:                  # 可选 - 文章封面在标题与正文之间出现
@@ -23,20 +23,15 @@ tags: [ tag-one, tag-two ]
 ---
 ```
 
-## 行内代码 & 强调
+## 文本
 
-You can mix `inline code`, *italics*, **bold**, and ***both*** in the same line. ~~Strikethrough~~ works too. <ins>下划线文本</ins> <font color="red">红色文字</font>  
+可以使用 *斜体*, **粗体**, ***粗斜体***, `行内代码`, ~~删除线~~, <ins>下划线</ins>, <font color="red">颜色</font> [链接](https://www.google.com "浮现文本") 等文字。
 
-这是一个[Google](https://www.google.com "可选的浮现文本")链接。
+<p style="text-align:center">居中显示的文字。</p>
 
-[这是一段隐藏的注释]: # 
-
-<p style="text-align:center">这段文字居中显示。</p>
-
->  A blockquote sits with a left rule, in italics, slightly muted.
+>  引用块文字。
 
 ## 分隔线
-
 ---
 
 ## 列表
@@ -88,13 +83,11 @@ $$
 
 ## 脚注
 
-Footnotes work via remark-gfm[^1]. They render at the bottom of the post and are linked back to the reference.
+渲染在文章底部, 通过 remark-gfm[^1] 实现。
 
-[^1]: Like this. Click the back-arrow to return to the citation.
+[^1]: 点击后退箭头可以返回引用位置。
 
 ## 自定义容器
-
-Three styled containers ship for asides:
 
 :::note
 A neutral note. Use this for clarifying context.
