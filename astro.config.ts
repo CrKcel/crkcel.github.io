@@ -26,9 +26,10 @@ import rehypeUnwrapImages from "rehype-unwrap-images";
 // (GitHub Pages project sites). See "Base path" in the README.
 const BASE_PATH = process.env.BASE_PATH || "/";
 const START_URL = BASE_PATH.endsWith("/") ? BASE_PATH : `${BASE_PATH}/`;
+const SITE_URL = process.env.SITE_URL || "https://crkcel.github.io";
 
 export default defineConfig({
-	site: "https://crkcel.github.io",
+	site: SITE_URL,
 	base: BASE_PATH,
 	image: {
 		domains: ["webmention.io"],

@@ -11,6 +11,10 @@
 		"start": "astro dev",
 		"build": "astro check && astro build",
 		"postbuild": "pagefind --site dist",
+		"build:cloudflare": "astro check && SITE_URL=https://blog.crkcel.com astro build",
+		"postbuild:cloudflare": "pagefind --site dist",
+		"deploy:cloudflare": "pnpm build:cloudflare && wrangler deploy",
+		"preview:cloudflare": "wrangler dev",
 		"preview": "astro preview",
 		"lint": "biome lint .",
 		"format": "pnpm run format:code && pnpm run format:imports",
@@ -67,7 +71,8 @@
 		"reading-time": "^1.5.0",
 		"rehype-unwrap-images": "^1.0.0",
 		"tailwindcss": "^4.3.2",
-		"typescript": "^6.0.3"
+		"typescript": "^6.0.3",
+		"wrangler": "^4.148.0"
 	},
 	"pnpm": {
 		"overrides": {
